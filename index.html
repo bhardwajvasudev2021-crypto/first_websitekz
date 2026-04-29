@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScienceQuest: The Magic of Light</title>
+    <meta name="description" content="Interactive learning platform for Class 10 CBSE Science - Light Chapter">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ScienceQuest</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#concepts">Concepts</a></li>
+            <li><a href="#sandbox">Sandbox</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover the <span class="highlight">Magic of Light</span></h1>
+            <p>Master Class 10 Physics through interactive experiments and engaging challenges.</p>
+            <a href="#sandbox" class="btn primary-btn">Start Exploring</a>
+        </div>
+    </header>
+
+    <section id="concepts" class="section concepts-section">
+        <h2 class="section-title">Core Concepts</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Reflection</h3>
+                <p>Bouncing back of light rays when they hit a smooth surface.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌈</div>
+                <h3>Refraction</h3>
+                <p>Bending of light as it passes from one medium to another.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <h3>Lenses & Mirrors</h3>
+                <p>How curved surfaces focus or spread out light rays.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sandbox" class="section sandbox-section">
+        <h2 class="section-title">Interactive Sandbox: Law of Reflection</h2>
+        <p class="section-subtitle">Adjust the angle of incidence to see how the reflected ray changes.</p>
+        
+        <div class="sandbox-container glass-panel">
+            <div class="controls">
+                <label for="angleSlider">Angle of Incidence: <span id="angleValue">45</span>°</label>
+                <input type="range" id="angleSlider" min="0" max="90" value="45">
+            </div>
+            <div class="canvas-wrapper">
+                <canvas id="reflectionCanvas" width="600" height="300"></canvas>
+            </div>
+            <div class="sandbox-info">
+                <p><strong>Law of Reflection:</strong> The angle of incidence equals the angle of reflection (∠i = ∠r).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+        <h2 class="section-title">Knowledge Check</h2>
+        <div class="quiz-container glass-panel" id="quizContainer">
+            <h3 id="questionText">Question goes here</h3>
+            <div class="options" id="optionsContainer">
+                <!-- Options will be dynamically added here -->
+            </div>
+            <button id="nextBtn" class="btn secondary-btn" style="display:none;">Next Question</button>
+            <div id="quizResult" style="display:none;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ScienceQuest. Built for Class 10 Students.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
